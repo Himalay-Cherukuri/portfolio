@@ -148,6 +148,25 @@ img { max-width: 100% }
   letter-spacing: .08em; margin-top: .15rem;
 }
 
+/* ===== TECH STRIP ===== */
+.tech-strip {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  align-items: center; margin-top: 2.5rem;
+  padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.06);
+}
+.tech-strip-label {
+  width: 100%; font-size: .65rem; font-weight: 600; color: #3a4050;
+  text-transform: uppercase; letter-spacing: .12em; margin-bottom: -.25rem;
+}
+.tech-icon {
+  width: 24px; height: 24px; opacity: .35;
+  transition: opacity .25s, filter .25s;
+}
+.tech-icon:not(.mono) { filter: grayscale(.3) brightness(1.2) }
+.tech-icon:not(.mono):hover { opacity: .85; filter: grayscale(0) brightness(1) }
+.tech-icon.mono { filter: invert(1) brightness(.5) }
+.tech-icon.mono:hover { opacity: .8; filter: invert(1) brightness(.95) }
+
 /* ===== SECTION RHYTHM ===== */
 .section { padding-block: 5rem }
 .section-label {
@@ -417,6 +436,7 @@ img { max-width: 100% }
       <div><div class="hero-stat-num">M.S.</div><div class="hero-stat-label">Business Analytics</div></div>
       <div><div class="hero-stat-num">Ph.D.</div><div class="hero-stat-label">IT (In Progress)</div></div>
     </div>
+    <div class="tech-strip" id="techStrip"></div>
   </div>
 </section>
 
@@ -566,6 +586,38 @@ function render() {
   document.getElementById('heroTagline').textContent = SUMMARY.tagline;
   document.getElementById('heroEmail').href = 'mailto:' + MAP.contact.email;
   document.getElementById('heroLinkedin').href = MAP.contact.linkedin;
+
+  /* Tech icon strip */
+  var TECH = [
+    {n:'Python', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'},
+    {n:'R', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg'},
+    {n:'Apache Spark', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg'},
+    {n:'AWS', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'},
+    {n:'Azure', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg'},
+    {n:'Apache Airflow', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg'},
+    {n:'Snowflake', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/snowflake.svg', m:1},
+    {n:'MySQL', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'},
+    {n:'PostgreSQL', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'},
+    {n:'SQL Server', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg'},
+    {n:'pandas', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg'},
+    {n:'NumPy', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg'},
+    {n:'Power BI', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/powerbi.svg', m:1},
+    {n:'Tableau', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tableau.svg', m:1},
+    {n:'Jupyter', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg'},
+    {n:'Git', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'},
+    {n:'Jira', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg'},
+    {n:'Confluence', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg'}
+  ];
+  var ts = document.getElementById('techStrip');
+  ts.innerHTML = '<div class="tech-strip-label">Tools &amp; Platforms</div>';
+  TECH.forEach(function(ic) {
+    var img = document.createElement('img');
+    img.className = 'tech-icon' + (ic.m ? ' mono' : '');
+    img.src = ic.u; img.alt = ic.n; img.title = ic.n;
+    img.width = 24; img.height = 24; img.loading = 'lazy';
+    img.onerror = function() { this.style.display = 'none' };
+    ts.appendChild(img);
+  });
 
   /* About */
   document.getElementById('aboutText').textContent = SUMMARY.about;
