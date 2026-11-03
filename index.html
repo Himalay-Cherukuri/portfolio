@@ -310,11 +310,15 @@ img { max-width: 100% }
 }
 .skill-chips { display: flex; flex-wrap: wrap; gap: .4rem }
 .skill-chip {
-  display: inline-flex; align-items: center; gap: .3rem;
+  display: inline-flex; align-items: center; gap: .35rem;
   padding: .25rem .6rem; border-radius: 5px;
   font-size: .78rem; background: var(--bg-sunken);
   color: var(--fg-muted); cursor: pointer; transition: all .15s;
   border: 1px solid transparent;
+}
+.skill-chip-icon {
+  width: 14px; height: 14px; object-fit: contain; flex-shrink: 0;
+  opacity: .7; border-radius: 2px;
 }
 .skill-chip:hover { border-color: var(--accent); color: var(--accent) }
 .skill-chip .sc {
@@ -682,14 +686,55 @@ function render() {
   buildTL('All');
 
   /* Skills */
+  var SKILL_ICONS = {
+    'Power BI': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/powerbi.svg',
+    'Tableau': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tableau.svg',
+    'DAX': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg',
+    'Excel': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/microsoftexcel.svg',
+    'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    'pandas': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
+    'NumPy': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg',
+    'SQL': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/sqlite.svg',
+    'PySpark': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg',
+    'R': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg',
+    'MySQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    'PostgreSQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+    'SQL Server': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg',
+    'Snowflake': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/snowflake.svg',
+    'Oracle': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg',
+    'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+    'Amazon S3': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazons3.svg',
+    'AWS Glue': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazonaws.svg',
+    'AWS Lambda': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/awslambda.svg',
+    'Amazon Redshift': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazonredshift.svg',
+    'Azure': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg',
+    'Apache Spark': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg',
+    'Apache Airflow': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg',
+    'spaCy': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/spacy.svg',
+    'Hugging Face': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/huggingface.svg',
+    'OpenAI': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg',
+    'FFmpeg': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/ffmpeg.svg',
+    'Jira': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg',
+    'Confluence': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg',
+    'Jupyter': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg',
+    'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    'GitHub': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+    'JSON': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg',
+    'Scikit-learn': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg',
+    'Bash': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg',
+    'Alteryx': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/alteryx.svg',
+    'SWIFT': 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/swift.svg'
+  };
   var sg = document.getElementById('skillsGrid');
   SKILLS.groups.forEach(function(g) {
     var h = '<div class="skill-group"><h3>' + esc(g.group) + '</h3><div class="skill-chips">';
     g.skills.forEach(function(s) {
       /* Hide phantom skills: no roles AND no bullets */
       if (!s.roles.length && !s.bullets.length) return;
+      var ico = SKILL_ICONS[s.name];
+      var icoHtml = ico ? '<img class="skill-chip-icon" src="' + ico + '" alt="" width="14" height="14" loading="lazy" onerror="this.style.display=\'none\'">' : '';
       h += '<span class="skill-chip' + (s.parent ? ' child' : '') + '" data-sk="' + esc(s.name) + '">' +
-        esc(s.name) + (s.count > 0 ? '<span class="sc">' + s.count + '</span>' : '') + '</span>';
+        icoHtml + esc(s.name) + (s.count > 0 ? '<span class="sc">' + s.count + '</span>' : '') + '</span>';
     });
     h += '</div></div>';
     sg.innerHTML += h;
@@ -764,7 +809,11 @@ function buildTL(tag) {
     });
     if (!hasMatch) return;
     var COMPANY_LOGOS = {
-      'Bank of America': {u:'https://upload.wikimedia.org/wikipedia/commons/2/20/Bank_of_America_logo.svg', inv:1}
+      'Bank of America': {u:'https://download.logo.wine/logo/Bank_of_America/Bank_of_America-Logo.wine.png', inv:1},
+      'Gemsource': {u:'https://media.licdn.com/dms/image/v2/C560BAQHcwIKQEayhcA/company-logo_400_400/company-logo_400_400/0/1658739456760?e=1795046400&v=beta&t=5XPJtltQ4nvONzrtitcWGqxnDwU9EXNqLsudZ7eQTyY', inv:0},
+      'Iresh': {u:'https://media.licdn.com/dms/image/v2/D4D0BAQGmi84nogKAAA/company-logo_400_400/B4DZc3WNw9HMAc-/0/1748980260458?e=1795046400&v=beta&t=XE-TWoQW2vzBrgQCt7wKL3ZehKbOiEZmuUJq7VOKp-M', inv:0},
+      'MagTech': {u:'https://media.licdn.com/dms/image/v2/C560BAQEBmVVLfZtSdQ/company-logo_400_400/company-logo_400_400/0/1630658867464?e=1795046400&v=beta&t=9oDSguRFx-S1GYpHsk5ISwwf2ji33Y8Kso1nRdiXVOU', inv:0},
+      'BringWise': {u:'https://bringwisecorp.com/wp-content/uploads/2022/10/Asset-3@600x-1-1-1024x471.png', inv:0}
     };
     var cName = g.company.replace(/ \(.*\)/, '');
     var parent = g.company.match(/\(([^)]+)\)/);
@@ -792,7 +841,16 @@ document.getElementById('sdClose').onclick = closeSD;
 sdO.onclick = closeSD;
 function closeSD() { sdP.classList.remove('open'); sdO.classList.remove('show') }
 function openSD(name) {
-  document.getElementById('sdName').textContent = name;
+  var sdNameEl = document.getElementById('sdName');
+  sdNameEl.textContent = name;
+  var sdIco = SKILL_ICONS[name];
+  if (sdIco) {
+    var ii = document.createElement('img');
+    ii.src = sdIco; ii.alt = ''; ii.width = 22; ii.height = 22;
+    ii.style.cssText = 'object-fit:contain;vertical-align:middle;margin-right:.4rem;border-radius:3px';
+    ii.onerror = function(){this.style.display='none'};
+    sdNameEl.insertBefore(ii, sdNameEl.firstChild);
+  }
   var skill = null;
   SKILLS.groups.forEach(function(g){g.skills.forEach(function(s){if(s.name===name)skill=s})});
   if (!skill) { document.getElementById('sdContent').innerHTML = '<p>No data.</p>'; return }
