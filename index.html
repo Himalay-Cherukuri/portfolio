@@ -461,7 +461,7 @@ img { max-width: 100% }
   <div class="track">
     <p class="section-label">04 &mdash; Skills</p>
     <h2 class="section-heading">Technical Skills</h2>
-    <p class="section-sub">74 skills grouped by category. Select any to see where it was used.</p>
+    <p class="section-sub">Skills grouped by category. Select any to see where it was used.</p>
     <div class="skills-grid" id="skillsGrid"></div>
   </div>
 </section>
@@ -604,6 +604,8 @@ function render() {
   SKILLS.groups.forEach(function(g) {
     var h = '<div class="skill-group"><h3>' + esc(g.group) + '</h3><div class="skill-chips">';
     g.skills.forEach(function(s) {
+      /* Hide phantom skills: no roles AND no bullets */
+      if (!s.roles.length && !s.bullets.length) return;
       h += '<span class="skill-chip' + (s.parent ? ' child' : '') + '" data-sk="' + esc(s.name) + '">' +
         esc(s.name) + (s.count > 0 ? '<span class="sc">' + s.count + '</span>' : '') + '</span>';
     });
@@ -706,7 +708,9 @@ function openSD(name) {
     h += '</div>';
   }
   if (!skill.roles.length && !skill.bullets.length) {
-    h = '<p style="color:var(--fg-faint)">Listed in Technical Skills but not referenced in any bullet.</p>';
+    h = '<p style="color:var(--fg-faint)">Listed in Technical Skills — no specific bullet references.</p>';
+  } else if (skill.roles.length && !skill.bullets.length) {
+    h += '<p style="color:var(--fg-faint);font-size:.82rem;margin-top:.5rem">Part of the working environment — not called out in a specific bullet.</p>';
   }
   document.getElementById('sdContent').innerHTML = h;
   sdP.classList.add('open'); sdO.classList.add('show');

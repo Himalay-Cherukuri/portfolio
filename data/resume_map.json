@@ -630,7 +630,16 @@
           "location": "Hyderabad, India",
           "dates": "Jun 2021 – Dec 2023",
           "company_dates": "Jun 2017 – Dec 2023",
-          "environment": [],
+          "environment": [
+            "Power BI",
+            "Tableau",
+            "SQL (MySQL, PostgreSQL, SQL Server, Snowflake)",
+            "Python (pandas)",
+            "R",
+            "DAX",
+            "VBA",
+            "Advanced Excel"
+          ],
           "primary_categories": [
             "BI & Visualization",
             "Business Analysis",
@@ -767,7 +776,18 @@
           "location": "Hyderabad, India",
           "dates": "Oct 2018 – May 2021",
           "company_dates": "Jun 2017 – Dec 2023",
-          "environment": [],
+          "environment": [
+            "SQL",
+            "Power BI",
+            "Tableau",
+            "Python",
+            "VBA",
+            "Advanced Excel",
+            "JIRA",
+            "Confluence",
+            "Visio",
+            "BRD/FRD"
+          ],
           "primary_categories": [
             "BI & Visualization",
             "Business Analysis",
@@ -894,7 +914,12 @@
           "location": "Hyderabad, India",
           "dates": "Jun 2017 – Oct 2018",
           "company_dates": "Jun 2017 – Dec 2023",
-          "environment": [],
+          "environment": [
+            "Advanced Excel (Pivot Tables, VBA)",
+            "SWIFT (MT700/707/710/720/799)",
+            "AML/KYC (AWARE system)",
+            "Reconciliation"
+          ],
           "primary_categories": [
             "BI & Visualization",
             "Compliance/Banking domain",
