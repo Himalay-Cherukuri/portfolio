@@ -1,8 +1,8 @@
 {
   "name": "Himalay Cherukuri",
-  "headline": "Data Analyst | Data Science & Forecasting: Python, SQL and Power BI analytics that drive operational decisions",
-  "tagline": "8+ years turning data into forecasts, dashboards and decisions, across hospitality operations, supply chain, payments and banking.",
-  "about": "I'm a Data Analyst with 8+ years of experience in data analytics, business intelligence, financial reporting, ETL pipeline development and business analysis. Most recently I consolidated 20 years of operating history across 17 properties and built Python forecasts that held within ~8–10% of actuals. Before that I spent 6+ years at Bank of America across retail banking, trade finance and AML/KYC compliance, delivering dashboards and automated reporting. I've also built ETL pipelines on AWS and Azure with Python, SQL, Spark and Airflow. I hold an M.S. in Business Analytics and am pursuing a Ph.D. in Information Technology.",
+  "headline": "Data Analyst | Data Engineer | Data Science & Forecasting: Python, SQL and Power BI analytics that drive operational decisions",
+  "tagline": "8+ years turning data into forecasts, dashboards, pipelines and decisions — across hospitality operations, supply chain, payments and banking.",
+  "about": "I'm a Data Analyst and Data Engineer with 8+ years of experience in data analytics, business intelligence, financial reporting, ETL pipeline development and business analysis. Most recently I consolidated 20 years of operating history across 17 properties and built Python forecasts that held within ~8–10% of actuals. Before that I spent 6+ years at Bank of America across retail banking, trade finance and AML/KYC compliance, delivering dashboards and automated reporting. I've also built ETL pipelines on AWS and Azure with Python, SQL, Spark and Airflow. I hold an M.S. in Business Analytics and am pursuing a Ph.D. in Information Technology.",
   "focus_order": [
     "Data Science / ML / Forecasting",
     "Data Analysis",

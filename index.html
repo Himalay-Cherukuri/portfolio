@@ -404,8 +404,8 @@ img { max-width: 100% }
 <!-- Hero -->
 <section class="hero band">
   <div class="track">
-    <p class="hero-title">Data Analyst &middot; Data Engineer &middot; Data Science &amp; Forecasting</p>
-    <h1 class="hero-name">Himalay<br>Cherukuri</h1>
+    <p class="hero-title" id="heroTitle"></p>
+    <h1 class="hero-name" id="heroName"></h1>
     <p class="hero-tagline" id="heroTagline"></p>
     <div class="hero-actions">
       <a href="#" class="btn-fill" id="heroEmail">Email Me</a>
@@ -556,7 +556,13 @@ function tags(arr) {
 }
 
 function render() {
-  /* Hero */
+  /* Hero — pull name, title, tagline from data */
+  var nameParts = MAP.contact.name.split(' ');
+  document.getElementById('heroName').innerHTML = esc(nameParts[0]) + '<br>' + esc(nameParts.slice(1).join(' '));
+  /* Extract roles from headline before the colon: "Data Analyst | Data Engineer | Data Science & Forecasting: ..." */
+  var hlParts = SUMMARY.headline.split(':');
+  var roles = hlParts[0].split('|').map(function(s){return s.trim()});
+  document.getElementById('heroTitle').textContent = roles.join(' · ');
   document.getElementById('heroTagline').textContent = SUMMARY.tagline;
   document.getElementById('heroEmail').href = 'mailto:' + MAP.contact.email;
   document.getElementById('heroLinkedin').href = MAP.contact.linkedin;
