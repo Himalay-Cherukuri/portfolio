@@ -248,7 +248,7 @@ img { max-width: 100% }
 }
 .tl-group { margin-bottom: 2.5rem }
 .tl-company-row {
-  position: relative; display: flex; align-items: baseline; gap: .6rem;
+  position: relative; display: flex; align-items: center; gap: .6rem;
   margin-bottom: .75rem; flex-wrap: wrap;
 }
 .tl-company-row::before {
@@ -256,6 +256,14 @@ img { max-width: 100% }
   width: 12px; height: 12px; border-radius: 50%;
   border: 2.5px solid var(--accent); background: var(--bg);
 }
+.tl-company-logo {
+  width: 28px; height: 28px; object-fit: contain; flex-shrink: 0;
+  border-radius: 4px; opacity: .8; align-self: center;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tl-company-logo.needs-inv { filter: brightness(0) invert(1) opacity(.7) }
+}
+:root[data-theme="dark"] .tl-company-logo.needs-inv { filter: brightness(0) invert(1) opacity(.7) }
 .tl-company-name { font-family: var(--font-display); font-size: 1.15rem; letter-spacing: -.01em }
 .tl-company-parent { font-size: .85rem; color: var(--fg-faint) }
 .tl-company-dates { font-family: var(--font-mono); font-size: .72rem; color: var(--fg-faint); letter-spacing: .02em }
@@ -355,6 +363,15 @@ img { max-width: 100% }
   background: var(--bg-elevated); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1.25rem;
 }
+.edu-card-top { display: flex; align-items: flex-start; gap: .75rem }
+.edu-logo {
+  width: 36px; height: 36px; object-fit: contain; flex-shrink: 0;
+  border-radius: 4px; margin-top: .1rem; opacity: .85;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .edu-logo.needs-inv { filter: brightness(1.5) }
+}
+:root[data-theme="dark"] .edu-logo.needs-inv { filter: brightness(1.5) }
 .edu-degree { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: .15rem }
 .edu-school { font-size: .82rem; color: var(--fg-muted) }
 .edu-dates { font-family: var(--font-mono); font-size: .72rem; color: var(--fg-faint); margin-top: .35rem }
@@ -606,7 +623,20 @@ function render() {
     {n:'Jupyter', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg'},
     {n:'Git', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'},
     {n:'Jira', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg'},
-    {n:'Confluence', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg'}
+    {n:'Confluence', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg'},
+    {n:'Scikit-learn', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg'},
+    {n:'Hugging Face', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/huggingface.svg', m:1},
+    {n:'OpenAI', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg', m:1},
+    {n:'spaCy', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/spacy.svg', m:1},
+    {n:'FFmpeg', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/ffmpeg.svg', m:1},
+    {n:'Bash', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg', m:1},
+    {n:'Amazon Redshift', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazonredshift.svg', m:1},
+    {n:'AWS Lambda', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/awslambda.svg', m:1},
+    {n:'AWS S3', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazons3.svg', m:1},
+    {n:'Oracle', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg'},
+    {n:'GitHub', u:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', m:1},
+    {n:'Alteryx', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/alteryx.svg', m:1},
+    {n:'SWIFT', u:'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/swift.svg', m:1}
   ];
   var ts = document.getElementById('techStrip');
   ts.innerHTML = '<div class="tech-strip-label">Tools &amp; Platforms</div>';
@@ -669,12 +699,26 @@ function render() {
   });
 
   /* Education */
+  var EDU_LOGOS = {
+    'Kent State University': {u:'https://upload.wikimedia.org/wikipedia/commons/3/36/Kent_State_University_logo.svg', inv:1},
+    'University of the Cumberlands': {u:'https://upload.wikimedia.org/wikipedia/commons/a/ad/Ucumberlands_logo.png', inv:0}
+  };
   var eg = document.getElementById('eduGrid');
   MAP.sections.find(function(s){return s.id==='education'}).items.forEach(function(e) {
-    eg.innerHTML += '<div class="edu-card"><div class="edu-degree">' + esc(e.degree) + '</div>' +
+    var schoolKey = Object.keys(EDU_LOGOS).find(function(k){return e.school.indexOf(k)>=0});
+    var logoHtml = '';
+    if (schoolKey) {
+      var lg = EDU_LOGOS[schoolKey];
+      logoHtml = '<img class="edu-logo' + (lg.inv ? ' needs-inv' : '') + '" src="' + lg.u +
+        '" alt="' + esc(schoolKey) + '" width="36" height="36" loading="lazy" onerror="this.style.display=\'none\'">';
+    }
+    eg.innerHTML += '<div class="edu-card">' +
+      (logoHtml ? '<div class="edu-card-top">' + logoHtml + '<div>' : '') +
+      '<div class="edu-degree">' + esc(e.degree) + '</div>' +
       '<div class="edu-school">' + esc(e.school) + '</div>' +
       '<div class="edu-dates">' + esc(e.dates) + '</div>' +
-      (e.status === 'in progress' ? '<span class="edu-badge">In Progress</span>' : '') + '</div>';
+      (e.status === 'in progress' ? '<span class="edu-badge">In Progress</span>' : '') +
+      (logoHtml ? '</div></div>' : '') + '</div>';
   });
 
   /* Contact */
@@ -719,9 +763,20 @@ function buildTL(tag) {
         '<div class="tl-body">' + bhtml + ehtml + '</div></div>';
     });
     if (!hasMatch) return;
+    var COMPANY_LOGOS = {
+      'Bank of America': {u:'https://upload.wikimedia.org/wikipedia/commons/2/20/Bank_of_America_logo.svg', inv:1}
+    };
     var cName = g.company.replace(/ \(.*\)/, '');
     var parent = g.company.match(/\(([^)]+)\)/);
+    var cLogoKey = Object.keys(COMPANY_LOGOS).find(function(k){return g.company.indexOf(k)>=0});
+    var cLogoHtml = '';
+    if (cLogoKey) {
+      var cl = COMPANY_LOGOS[cLogoKey];
+      cLogoHtml = '<img class="tl-company-logo' + (cl.inv ? ' needs-inv' : '') + '" src="' + cl.u +
+        '" alt="' + esc(cLogoKey) + '" width="28" height="28" loading="lazy" onerror="this.style.display=\'none\'">';
+    }
     tl.innerHTML += '<div class="tl-group"><div class="tl-company-row">' +
+      cLogoHtml +
       '<span class="tl-company-name">' + esc(cName) + '</span>' +
       (parent ? '<span class="tl-company-parent">(' + esc(parent[1]) + ')</span>' : '') +
       '<span class="tl-company-dates">' + esc(g.cd) + '</span></div>' + rhtml + '</div>';
