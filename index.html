@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Himalay Cherukuri — Data Analyst | Data Science & Forecasting</title>
+<meta name="description" content="Portfolio of Himalay Cherukuri — Data Analyst with 8+ years in analytics, forecasting, BI and data engineering across hospitality, supply chain, payments and banking.">
+<style>
+/* ===== Reset & Variables ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafaf9;--bg-card:#fff;--bg-hero:#111318;--bg-hero-accent:#1a1f2b;
+  --text:#1e1e1e;--text-muted:#5a5a5a;--text-faint:#8a8a8a;--text-hero:#f0f0f0;
+  --accent:#2563eb;--accent-hover:#1d4ed8;--accent-light:#dbeafe;
+  --border:#e5e5e5;--border-light:#f0f0f0;
+  --tag-ds:#7c3aed;--tag-da:#2563eb;--tag-bi:#0891b2;--tag-ba:#d97706;
+  --tag-de:#059669;--tag-ai:#db2777;--tag-comp:#6b7280;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:ui-monospace,"Cascadia Code","Source Code Pro",monospace;
+  --gutter:1rem;--max-w:1100px;--header-h:60px;
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1117;--bg-card:#1a1d27;--bg-hero:#0a0c12;--bg-hero-accent:#141824;
+    --text:#e4e4e7;--text-muted:#a1a1aa;--text-faint:#71717a;
+    --accent:#60a5fa;--accent-hover:#93bbfd;--accent-light:#1e3a5f;
+    --border:#27272a;--border-light:#1f1f23;
+    --tag-ds:#a78bfa;--tag-da:#60a5fa;--tag-bi:#22d3ee;--tag-ba:#fbbf24;
+    --tag-de:#34d399;--tag-ai:#f472b6;--tag-comp:#9ca3af;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1117;--bg-card:#1a1d27;--bg-hero:#0a0c12;--bg-hero-accent:#141824;
+  --text:#e4e4e7;--text-muted:#a1a1aa;--text-faint:#71717a;
+  --accent:#60a5fa;--accent-hover:#93bbfd;--accent-light:#1e3a5f;
+  --border:#27272a;--border-light:#1f1f23;
+  --tag-ds:#a78bfa;--tag-da:#60a5fa;--tag-bi:#22d3ee;--tag-ba:#fbbf24;
+  --tag-de:#34d399;--tag-ai:#f472b6;--tag-comp:#9ca3af;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ===== Header / Nav ===== */
+.site-header{position:sticky;top:0;z-index:100;background:var(--bg);
+  border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+.header-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter);
+  display:flex;align-items:center;height:var(--header-h);gap:1rem}
+.header-name{font-weight:700;font-size:1.1rem;color:var(--text);text-decoration:none;white-space:nowrap}
+.header-name span{color:var(--accent)}
+nav{margin-left:auto;display:flex;gap:.25rem}
+nav a{font-size:.875rem;color:var(--text-muted);text-decoration:none;padding:.4rem .65rem;border-radius:6px;transition:all .15s}
+nav a:hover{color:var(--text);background:var(--border-light)}
+.theme-toggle{background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--text-muted);padding:.4rem}
+.menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text)}
+
+/* Mobile nav */
+@media(max-width:768px){
+  nav{position:fixed;top:var(--header-h);right:0;bottom:0;width:260px;
+    flex-direction:column;background:var(--bg-card);border-left:1px solid var(--border);
+    padding:1rem;transform:translateX(100%);transition:transform .25s ease;z-index:99;gap:0}
+  nav.open{transform:translateX(0)}
+  nav a{font-size:1rem;padding:.75rem .5rem;border-bottom:1px solid var(--border-light)}
+  .menu-btn{display:block}
+  .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:98;display:none}
+  .nav-overlay.show{display:block}
+}
+
+/* ===== Hero ===== */
+.hero{background:var(--bg-hero);color:var(--text-hero);padding:4rem var(--gutter) 3.5rem;text-align:center}
+.hero-inner{max-width:720px;margin:0 auto}
+.hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem}
+.hero .tagline{font-size:clamp(.95rem,2.5vw,1.15rem);color:#94a3b8;line-height:1.5;margin-bottom:1.5rem}
+.hero-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.hero-btns a{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem 1.25rem;border-radius:8px;
+  font-size:.9rem;font-weight:600;text-decoration:none;transition:all .15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.btn-secondary{background:rgba(255,255,255,.08);color:#cbd5e1;border:1px solid rgba(255,255,255,.12)}
+.btn-secondary:hover{background:rgba(255,255,255,.14)}
+.stat-strip{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.stat{text-align:center}
+.stat .num{font-size:1.4rem;font-weight:700;color:#fff}
+.stat .label{font-size:.75rem;color:#64748b;text-transform:uppercase;letter-spacing:.05em}
+
+/* ===== Sections ===== */
+section{padding:3.5rem var(--gutter)}
+.section-inner{max-width:var(--max-w);margin:0 auto}
+section h2{font-size:1.5rem;font-weight:700;margin-bottom:.35rem}
+section .section-sub{font-size:.9rem;color:var(--text-muted);margin-bottom:2rem}
+.divider{width:40px;height:3px;background:var(--accent);border-radius:2px;margin-bottom:1.5rem}
+
+/* ===== About ===== */
+.about-text{font-size:1.05rem;line-height:1.75;max-width:72ch;color:var(--text-muted)}
+
+/* ===== Featured Cards ===== */
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+.feat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;
+  transition:box-shadow .2s,transform .2s}
+.feat-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.08);transform:translateY(-2px)}
+.feat-metric{font-size:1.8rem;font-weight:800;color:var(--accent);margin-bottom:.5rem;font-family:var(--font-mono)}
+.feat-role{font-size:.8rem;color:var(--text-faint);margin-bottom:.5rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.feat-text{font-size:.875rem;color:var(--text-muted);line-height:1.55}
+.feat-text mark{background:var(--accent-light);color:var(--accent);padding:0 .15rem;border-radius:2px;font-weight:600}
+.feat-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.75rem}
+
+/* ===== Tag Chips ===== */
+.tag{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .55rem;border-radius:99px;
+  text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.tag[data-tag="Data Science / ML / Forecasting"]{background:color-mix(in srgb,var(--tag-ds) 15%,transparent);color:var(--tag-ds)}
+.tag[data-tag="Data Analysis"]{background:color-mix(in srgb,var(--tag-da) 15%,transparent);color:var(--tag-da)}
+.tag[data-tag="BI & Visualization"]{background:color-mix(in srgb,var(--tag-bi) 15%,transparent);color:var(--tag-bi)}
+.tag[data-tag="Business Analysis"]{background:color-mix(in srgb,var(--tag-ba) 15%,transparent);color:var(--tag-ba)}
+.tag[data-tag="Data Engineering"]{background:color-mix(in srgb,var(--tag-de) 15%,transparent);color:var(--tag-de)}
+.tag[data-tag="AI / NLP"]{background:color-mix(in srgb,var(--tag-ai) 15%,transparent);color:var(--tag-ai)}
+.tag[data-tag="Compliance/Banking domain"]{background:color-mix(in srgb,var(--tag-comp) 15%,transparent);color:var(--tag-comp)}
+
+/* ===== Filter Chips ===== */
+.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.filter-chip{background:var(--bg-card);border:1px solid var(--border);border-radius:99px;padding:.35rem .85rem;
+  font-size:.8rem;cursor:pointer;transition:all .15s;color:var(--text-muted);font-weight:500}
+.filter-chip:hover{border-color:var(--accent);color:var(--accent)}
+.filter-chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-chip .count{font-size:.7rem;opacity:.7;margin-left:.25rem}
+
+/* ===== Timeline ===== */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--border)}
+.tl-group{margin-bottom:2rem}
+.tl-group-head{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.75rem;position:relative}
+.tl-group-head::before{content:'';position:absolute;left:-2rem;top:6px;width:16px;height:16px;
+  border-radius:50%;border:3px solid var(--accent);background:var(--bg)}
+.tl-company{font-size:1.1rem;font-weight:700}
+.tl-company-dates{font-size:.8rem;color:var(--text-faint)}
+.tl-role{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;overflow:hidden}
+.tl-role-head{padding:1rem 1.25rem;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.tl-role-head:hover{background:var(--border-light)}
+.tl-title{font-weight:600;font-size:.95rem}
+.tl-dates{font-size:.8rem;color:var(--text-faint);white-space:nowrap}
+.tl-oneliner{font-size:.85rem;color:var(--text-muted);margin-top:.25rem}
+.tl-arrow{font-size:.8rem;color:var(--text-faint);transition:transform .2s;flex-shrink:0;margin-top:.2rem}
+.tl-role.open .tl-arrow{transform:rotate(180deg)}
+.tl-body{display:none;padding:0 1.25rem 1.25rem;border-top:1px solid var(--border-light)}
+.tl-role.open .tl-body{display:block}
+.tl-bullet{padding:.6rem 0;border-bottom:1px solid var(--border-light);font-size:.875rem;color:var(--text-muted);line-height:1.55}
+.tl-bullet:last-child{border-bottom:none}
+.tl-bullet mark{background:var(--accent-light);color:var(--accent);padding:0 .15rem;border-radius:2px;font-weight:600}
+.tl-bullet .bullet-tags{margin-top:.35rem}
+.tl-env{padding:.75rem 0 0;font-size:.8rem;color:var(--text-faint)}
+.tl-env strong{color:var(--text-muted)}
+
+/* ===== Skills Grid ===== */
+.skills-groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.skill-group{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.skill-group h3{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--text-faint);margin-bottom:.75rem}
+.skill-chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.skill-chip{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .65rem;border-radius:6px;
+  font-size:.8rem;background:var(--border-light);color:var(--text-muted);cursor:pointer;transition:all .15s;border:1px solid transparent}
+.skill-chip:hover{border-color:var(--accent);color:var(--accent)}
+.skill-chip .skill-count{font-size:.65rem;background:var(--accent-light);color:var(--accent);
+  padding:.1rem .35rem;border-radius:99px;font-weight:700}
+.skill-chip.sub{padding-left:.4rem;font-size:.75rem}
+.skill-chip.sub::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--text-faint);flex-shrink:0}
+
+/* Skill detail panel */
+.skill-detail{position:fixed;top:0;right:0;bottom:0;width:400px;max-width:90vw;background:var(--bg-card);
+  border-left:1px solid var(--border);z-index:200;transform:translateX(100%);transition:transform .25s ease;
+  overflow-y:auto;padding:1.5rem}
+.skill-detail.open{transform:translateX(0)}
+.skill-detail-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:199;display:none}
+.skill-detail-overlay.show{display:block}
+.skill-detail h3{font-size:1.1rem;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center}
+.skill-detail .close-btn{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text-muted)}
+.sd-section{margin-bottom:1rem}
+.sd-section h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-faint);margin-bottom:.4rem}
+.sd-bullet{font-size:.85rem;color:var(--text-muted);padding:.4rem 0;border-bottom:1px solid var(--border-light);line-height:1.5}
+.sd-bullet:last-child{border-bottom:none}
+.sd-role{font-size:.8rem;color:var(--accent);font-weight:600}
+
+/* ===== Education ===== */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.edu-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem}
+.edu-degree{font-weight:700;font-size:1rem;margin-bottom:.2rem}
+.edu-school{font-size:.85rem;color:var(--text-muted)}
+.edu-dates{font-size:.8rem;color:var(--text-faint);margin-top:.35rem}
+.edu-badge{display:inline-block;font-size:.7rem;font-weight:700;padding:.15rem .5rem;border-radius:99px;
+  background:color-mix(in srgb,var(--tag-ds) 15%,transparent);color:var(--tag-ds);margin-top:.4rem}
+
+/* ===== Contact ===== */
+.contact-section{background:var(--bg-hero);color:var(--text-hero);text-align:center}
+.contact-section h2{color:#fff}
+.contact-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
+.contact-links a{color:#94a3b8;text-decoration:none;font-size:.95rem;padding:.5rem 1rem;border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;transition:all .15s}
+.contact-links a:hover{background:rgba(255,255,255,.08);color:#fff}
+
+/* ===== Footer ===== */
+.site-footer{text-align:center;padding:1.5rem var(--gutter);font-size:.8rem;color:var(--text-faint);border-top:1px solid var(--border)}
+
+/* ===== Utilities ===== */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+@media(max-width:480px){
+  .featured-grid{grid-template-columns:1fr}
+  .stat-strip{gap:1.25rem}
+  .stat .num{font-size:1.2rem}
+  section{padding:2.5rem var(--gutter)}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="header-name">Himalay<span>.</span></a>
+    <button class="menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav id="mainNav">
+      <a href="#about">About</a>
+      <a href="#featured">Highlights</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9790;</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <h1 id="heroName"></h1>
+    <p class="tagline" id="heroTagline"></p>
+    <div class="hero-btns" id="heroBtns"></div>
+    <div class="stat-strip">
+      <div class="stat"><div class="num">8+</div><div class="label">Years Experience</div></div>
+      <div class="stat"><div class="num">6+</div><div class="label">Years at Bank of America</div></div>
+      <div class="stat"><div class="num">M.S.</div><div class="label">Business Analytics</div></div>
+      <div class="stat"><div class="num">Ph.D.</div><div class="label">IT (In Progress)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2>About</h2>
+    <p class="about-text" id="aboutText"></p>
+  </div>
+</section>
+
+<!-- Featured -->
+<section id="featured" style="background:var(--border-light)">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2>Data Analysis & Data Science Highlights</h2>
+    <p class="section-sub">Top work across forecasting, analytics and data science — ranked by depth and impact.</p>
+    <div class="featured-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2>Professional Experience</h2>
+    <p class="section-sub">7 roles across 4 companies, newest first. Filter by discipline.</p>
+    <div class="filter-bar" id="filterBar"></div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" style="background:var(--border-light)">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2>Technical Skills</h2>
+    <p class="section-sub">74 skills grouped by category. Click any skill to see where it was used.</p>
+    <div class="skills-groups" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- Skill Detail Panel -->
+<div class="skill-detail-overlay" id="sdOverlay"></div>
+<div class="skill-detail" id="sdPanel">
+  <h3><span id="sdName"></span><button class="close-btn" id="sdClose">&times;</button></h3>
+  <div id="sdContent"></div>
+</div>
+
+<!-- Education -->
+<section id="education">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <h2>Education</h2>
+    <div class="edu-grid" id="eduGrid"></div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="divider" style="margin-left:auto;margin-right:auto"></div>
+    <h2>Get in Touch</h2>
+    <p style="color:#94a3b8;margin-top:.5rem" id="contactLocation"></p>
+    <div class="contact-links" id="contactLinks"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; <span id="footerYear"></span> Himalay Cherukuri</p>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ---- Theme ---- */
+var root=document.documentElement, toggle=document.getElementById('themeToggle');
+function applyTheme(t){root.setAttribute('data-theme',t);try{localStorage.setItem('hc-theme',t)}catch(e){}
+  toggle.textContent=t==='dark'?'☀':'☾'}
+(function(){var s;try{s=localStorage.getItem('hc-theme')}catch(e){}
+  if(s==='dark'||s==='light')applyTheme(s)})();
+toggle.addEventListener('click',function(){
+  var c=root.getAttribute('data-theme');
+  if(!c)c=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  applyTheme(c==='dark'?'light':'dark')});
+
+/* ---- Mobile nav ---- */
+var nav=document.getElementById('mainNav'),menuBtn=document.querySelector('.menu-btn'),
+    overlay=document.getElementById('navOverlay');
+menuBtn.addEventListener('click',function(){nav.classList.toggle('open');overlay.classList.toggle('show')});
+overlay.addEventListener('click',function(){nav.classList.remove('open');overlay.classList.remove('show')});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+  nav.classList.remove('open');overlay.classList.remove('show')})});
+
+/* ---- Data loading ---- */
+var MAP,SKILLS,SUMMARY;
+var allBullets={};  // id -> bullet+role info
+
+Promise.all([
+  fetch('data/resume_map.json').then(function(r){return r.json()}),
+  fetch('data/skills.json').then(function(r){return r.json()}),
+  fetch('data/summary.json').then(function(r){return r.json()})
+]).then(function(d){
+  MAP=d[0]; SKILLS=d[1]; SUMMARY=d[2];
+  // index bullets
+  var roles=MAP.sections.find(function(s){return s.id==='experience'}).roles;
+  roles.forEach(function(r){r.bullets.forEach(function(b){allBullets[b.id]={bullet:b,role:r}})});
+  render();
+});
+
+function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+
+function highlightMetrics(text,metrics){
+  if(!metrics||!metrics.length)return esc(text);
+  var h=esc(text);
+  metrics.forEach(function(m){
+    var em=esc(m);
+    h=h.split(em).join('<mark>'+em+'</mark>')});
+  return h}
+
+function pickMetric(metrics){
+  if(!metrics||!metrics.length)return null;
+  var pct=metrics.find(function(m){return m.indexOf('%')>=0});
+  if(pct)return pct;
+  var x=metrics.find(function(m){return /\dx\b/.test(m)});
+  if(x)return x;
+  return metrics[0]}
+
+function tagChips(tags){
+  return tags.map(function(t){return '<span class="tag" data-tag="'+esc(t)+'">'+esc(t)+'</span>'}).join('')}
+
+function render(){
+  /* Hero */
+  document.getElementById('heroName').textContent=SUMMARY.headline.split(':')[0];
+  document.getElementById('heroTagline').textContent=SUMMARY.tagline;
+  var btns=document.getElementById('heroBtns');
+  btns.innerHTML='<a href="mailto:'+esc(MAP.contact.email)+'" class="btn-primary">Email Me</a>'+
+    '<a href="'+esc(MAP.contact.linkedin)+'" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>';
+
+  /* About */
+  document.getElementById('aboutText').textContent=SUMMARY.about;
+
+  /* Featured */
+  var fg=document.getElementById('featuredGrid');
+  MAP.featured_bullet_ids.forEach(function(id){
+    var info=allBullets[id]; if(!info)return;
+    var b=info.bullet, r=info.role;
+    var m=pickMetric(b.metrics);
+    fg.innerHTML+='<div class="feat-card">'+
+      (m?'<div class="feat-metric">'+esc(m)+'</div>':'')+
+      '<div class="feat-role">'+esc(r.title)+' &middot; '+esc(r.company)+'</div>'+
+      '<div class="feat-text">'+highlightMetrics(b.text,b.metrics)+'</div>'+
+      '<div class="feat-tags">'+tagChips(b.tags)+'</div></div>'});
+
+  /* Filter bar */
+  var fb=document.getElementById('filterBar');
+  fb.innerHTML='<button class="filter-chip active" data-filter="All">All<span class="count"> '+MAP.meta.counts.bullets+'</span></button>';
+  SUMMARY.focus_order.forEach(function(t){
+    fb.innerHTML+='<button class="filter-chip" data-filter="'+esc(t)+'">'+esc(t)+
+      '<span class="count"> '+MAP.meta.tag_counts[t]+'</span></button>'});
+  fb.querySelectorAll('.filter-chip').forEach(function(chip){
+    chip.addEventListener('click',function(){
+      fb.querySelectorAll('.filter-chip').forEach(function(c){c.classList.remove('active')});
+      chip.classList.add('active');
+      filterTimeline(chip.getAttribute('data-filter'))})});
+
+  /* Timeline */
+  buildTimeline('All');
+
+  /* Skills */
+  var sg=document.getElementById('skillsGrid');
+  SKILLS.groups.forEach(function(g){
+    var html='<div class="skill-group"><h3>'+esc(g.group)+'</h3><div class="skill-chips">';
+    g.skills.forEach(function(s){
+      html+='<span class="skill-chip'+(s.parent?' sub':'')+'" data-skill="'+esc(s.name)+'">'
+        +esc(s.name)
+        +(s.count>0?'<span class="skill-count">'+s.count+'</span>':'')
+        +'</span>'});
+    html+='</div></div>';
+    sg.innerHTML+=html});
+  sg.querySelectorAll('.skill-chip').forEach(function(chip){
+    chip.addEventListener('click',function(){openSkillDetail(chip.getAttribute('data-skill'))})});
+
+  /* Education */
+  var eg=document.getElementById('eduGrid');
+  var edu=MAP.sections.find(function(s){return s.id==='education'}).items;
+  edu.forEach(function(e){
+    eg.innerHTML+='<div class="edu-card"><div class="edu-degree">'+esc(e.degree)+'</div>'+
+      '<div class="edu-school">'+esc(e.school)+'</div>'+
+      '<div class="edu-dates">'+esc(e.dates)+'</div>'+
+      (e.status==='in progress'?'<span class="edu-badge">In Progress</span>':'')+'</div>'});
+
+  /* Contact */
+  document.getElementById('contactLocation').textContent=MAP.contact.location;
+  var cl=document.getElementById('contactLinks');
+  cl.innerHTML='<a href="mailto:'+esc(MAP.contact.email)+'">'+esc(MAP.contact.email)+'</a>'+
+    '<a href="'+esc(MAP.contact.linkedin)+'" target="_blank" rel="noopener">LinkedIn Profile</a>';
+
+  document.getElementById('footerYear').textContent=new Date().getFullYear();
+}
+
+/* ---- Timeline ---- */
+var activeFilter='All';
+function filterTimeline(tag){activeFilter=tag;buildTimeline(tag)}
+
+function buildTimeline(tag){
+  var tl=document.getElementById('timeline');
+  tl.innerHTML='';
+  var roles=MAP.sections.find(function(s){return s.id==='experience'}).roles;
+  var summaryRoles=SUMMARY.roles;
+  // group by company_dates for BA Continuum
+  var groups=[], seen={};
+  roles.forEach(function(r){
+    var key=r.company+'|'+r.company_dates;
+    if(!seen[key]){seen[key]={company:r.company,company_dates:r.company_dates,roles:[]};groups.push(seen[key])}
+    seen[key].roles.push(r)});
+
+  groups.forEach(function(g){
+    var groupHasMatch=false;
+    var rolesHtml='';
+    g.roles.forEach(function(r){
+      var sr=summaryRoles.find(function(x){return x.id===r.id});
+      var filteredBullets=r.bullets.filter(function(b){return tag==='All'||b.tags.indexOf(tag)>=0});
+      if(tag!=='All'&&filteredBullets.length===0)return;
+      groupHasMatch=true;
+      var bulletsHtml=filteredBullets.map(function(b){
+        return '<div class="tl-bullet">'+highlightMetrics(b.text,b.metrics)+
+          '<div class="bullet-tags">'+tagChips(b.tags)+'</div></div>'}).join('');
+      var envHtml=r.environment.length?'<div class="tl-env"><strong>Environment:</strong> '+r.environment.map(esc).join(', ')+'</div>':'';
+      rolesHtml+='<div class="tl-role"><div class="tl-role-head">'+
+        '<div><div class="tl-title">'+esc(r.title)+'</div>'+
+        '<div class="tl-dates">'+esc(r.dates)+'</div>'+
+        (sr?'<div class="tl-oneliner">'+esc(sr.one_liner)+'</div>':'')+'</div>'+
+        '<span class="tl-arrow">&#9660;</span></div>'+
+        '<div class="tl-body">'+bulletsHtml+envHtml+'</div></div>'});
+
+    if(!groupHasMatch)return;
+    var company=g.company.replace(/ \(.*\)/,'');
+    var parent=g.company.match(/\(([^)]+)\)/);
+    tl.innerHTML+='<div class="tl-group"><div class="tl-group-head">'+
+      '<span class="tl-company">'+esc(company)+(parent?' <span style="font-weight:400;color:var(--text-faint)">('+esc(parent[1])+')</span>':'')+'</span>'+
+      '<span class="tl-company-dates">'+esc(g.company_dates)+'</span></div>'+rolesHtml+'</div>'});
+
+  // collapse/expand
+  tl.querySelectorAll('.tl-role-head').forEach(function(head){
+    head.addEventListener('click',function(){head.parentElement.classList.toggle('open')})});
+}
+
+/* ---- Skill Detail ---- */
+var sdPanel=document.getElementById('sdPanel'),sdOverlay=document.getElementById('sdOverlay'),
+    sdName=document.getElementById('sdName'),sdContent=document.getElementById('sdContent');
+document.getElementById('sdClose').addEventListener('click',closeSD);
+sdOverlay.addEventListener('click',closeSD);
+function closeSD(){sdPanel.classList.remove('open');sdOverlay.classList.remove('show')}
+
+function openSkillDetail(name){
+  sdName.textContent=name;
+  var skill=null;
+  SKILLS.groups.forEach(function(g){g.skills.forEach(function(s){if(s.name===name)skill=s})});
+  if(!skill){sdContent.innerHTML='<p>No data found.</p>';return}
+  var html='';
+  if(skill.roles.length){
+    html+='<div class="sd-section"><h4>Used in '+skill.roles.length+' role'+(skill.roles.length>1?'s':'')+'</h4>';
+    var roles=MAP.sections.find(function(s){return s.id==='experience'}).roles;
+    skill.roles.forEach(function(rid){
+      var r=roles.find(function(x){return x.id===rid});
+      if(r)html+='<div class="sd-role">'+esc(r.title)+' &middot; '+esc(r.company)+'</div>'});
+    html+='</div>'}
+  if(skill.bullets.length){
+    html+='<div class="sd-section"><h4>'+skill.bullets.length+' bullet'+(skill.bullets.length>1?'s':'')+'</h4>';
+    skill.bullets.forEach(function(bid){
+      var info=allBullets[bid];
+      if(info)html+='<div class="sd-bullet">'+highlightMetrics(info.bullet.text,info.bullet.metrics)+'</div>'});
+    html+='</div>'}
+  if(!skill.roles.length&&!skill.bullets.length){
+    html+='<p style="color:var(--text-faint)">Listed in Technical Skills but not mentioned in any bullet or environment line.</p>'}
+  sdContent.innerHTML=html;
+  sdPanel.classList.add('open');sdOverlay.classList.add('show')}
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1041 @@
+{
+  "meta": {
+    "source": "resume PDF (3 pages), parsed by scripts/01-07",
+    "privacy": "phone number, street address and ZIP removed",
+    "counts": {
+      "sections": 4,
+      "roles": 7,
+      "bullets": 48,
+      "skills": 74,
+      "tags": 7,
+      "education": 4
+    },
+    "tag_list": [
+      "AI / NLP",
+      "BI & Visualization",
+      "Business Analysis",
+      "Compliance/Banking domain",
+      "Data Analysis",
+      "Data Engineering",
+      "Data Science / ML / Forecasting"
+    ],
+    "tag_counts": {
+      "AI / NLP": 5,
+      "BI & Visualization": 19,
+      "Business Analysis": 14,
+      "Compliance/Banking domain": 15,
+      "Data Analysis": 19,
+      "Data Engineering": 15,
+      "Data Science / ML / Forecasting": 7
+    }
+  },
+  "contact": {
+    "name": "Himalay Cherukuri",
+    "location": "Aubrey, TX",
+    "email": "himalaya.cherukuri@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/himalay-cherukuri"
+  },
+  "sections": [
+    {
+      "id": "summary",
+      "title": "Professional Summary",
+      "text": "Data Analyst and Data Engineer with 8+ years of experience spanning data analytics, business intelligence, financial reporting, ETL pipeline development, and business analysis. Built a strong analytical and business analysis foundation at Bank of America over 6+ years across retail banking, trade finance, and AML/KYC compliance — authoring BRDs, translating stakeholder requirements, and delivering dashboards and automated reporting systems. Extended into data engineering roles building ETL pipelines on AWS and Azure using Python, SQL, Spark, and Airflow. Skilled in bridging business needs and technical execution using Power BI, Tableau, and cloud platforms. Currently pursuing a Ph.D. in Information Technology."
+    },
+    {
+      "id": "skills",
+      "title": "Technical Skills",
+      "see": "skills.json"
+    },
+    {
+      "id": "experience",
+      "title": "Professional Experience",
+      "roles": [
+        {
+          "id": "EXP01",
+          "company": "Iresh Technologies LLC",
+          "title": "Data Analyst — Operations Research & Operations Management",
+          "location": "Aubrey, TX",
+          "dates": "Jan 2026 – May 2026",
+          "company_dates": "Jan 2026 – May 2026",
+          "environment": [
+            "Python (pandas, NumPy, statsmodels)",
+            "SQL (MySQL)",
+            "Power BI",
+            "Advanced Excel (Solver, VBA, Pivot Tables)",
+            "Jupyter",
+            "Git"
+          ],
+          "primary_categories": [
+            "BI & Visualization",
+            "Data Analysis",
+            "Data Science / ML / Forecasting"
+          ],
+          "role_focus_score": 50,
+          "bullets": [
+            {
+              "id": "EXP01.B01",
+              "text": "Consolidated 20 years of operating history (2005–2026) across 17 properties — ~2.1M booking, folio, staffing, inventory, and service records — from disconnected spreadsheets into a normalized MySQL schema, resolving 240+ date, duplicate-ID, and property-code inconsistencies to create the single source the entire analysis ran on.",
+              "metrics": [
+                "20 years",
+                "17 properties",
+                "~2.1M",
+                "240+"
+              ],
+              "tools": [
+                "MySQL",
+                "Star/Snowflake Schema"
+              ],
+              "tags": [
+                "Data Analysis",
+                "Data Engineering"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 36
+            },
+            {
+              "id": "EXP01.B02",
+              "text": "Forecasted occupancy and demand in Python (pandas, statsmodels) with seasonal decomposition and rolling-window smoothing, factoring local events and attraction calendars into 30/60/90-day projections that held within ~8–10% of actuals and gave managers 4–12 weeks of lead time for staffing and inventory decisions.",
+              "metrics": [
+                "30/60/90-day",
+                "~8–10%",
+                "4–12 weeks"
+              ],
+              "tools": [
+                "Python",
+                "Pandas",
+                "statsmodels"
+              ],
+              "tags": [
+                "Data Science / ML / Forecasting",
+                "Business Analysis"
+              ],
+              "category": "Data Science / ML / Forecasting",
+              "focus_score": 100
+            },
+            {
+              "id": "EXP01.B03",
+              "text": "Analyzed booking-channel mix (OTA, direct, corporate, walk-in) against net ADR, finding 15–20% OTA commissions eroded margin on ~35% of bookings, and identified 6 properties where a direct-booking shift could recover an estimated 5–8% of room revenue.",
+              "metrics": [
+                "15–20%",
+                "~35%",
+                "6 properties",
+                "5–8%"
+              ],
+              "tools": [],
+              "tags": [
+                "Data Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 45
+            },
+            {
+              "id": "EXP01.B04",
+              "text": "Analyzed staff productivity and personnel allocation across front desk, housekeeping, and maintenance — rooms-serviced-per-labor-hour, shift coverage vs. arrival load, overtime concentration, and cross-department deployment — building per-property workforce profiles that right-sized schedules against forecasted demand and cut reactive overtime by an estimated 20–25% while holding peak-window coverage.",
+              "metrics": [
+                "20–25%"
+              ],
+              "tools": [],
+              "tags": [
+                "Data Science / ML / Forecasting",
+                "Data Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 53
+            },
+            {
+              "id": "EXP01.B05",
+              "text": "Measured housekeeping turnaround against arrival curves, exposing rooms-ready-by-check-in lagging on high-arrival days, and resequenced cleaning priorities and shift starts to lift on-time room readiness by an estimated 15% — directly reducing front-desk wait and early-arrival complaints.",
+              "metrics": [
+                "15%"
+              ],
+              "tools": [],
+              "tags": [
+                "Data Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 38
+            },
+            {
+              "id": "EXP01.B06",
+              "text": "Categorized two decades of guest complaint and service logs through text frequency analysis in Python, isolating the recurring issue types behind ~60% of repeat dissatisfaction and mapping them to the specific properties, seasons, and shifts where they concentrated for targeted service recovery.",
+              "metrics": [
+                "~60%"
+              ],
+              "tools": [
+                "Python"
+              ],
+              "tags": [
+                "Data Science / ML / Forecasting",
+                "Data Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 64
+            },
+            {
+              "id": "EXP01.B07",
+              "text": "Traced billing disputes, chargebacks, and payment failures by channel and charge type, linking the bulk of disputes to third-party vs. property-collected charge ambiguity and recommending pre-arrival verification steps projected to cut payment escalations by an estimated 30%.",
+              "metrics": [
+                "30%"
+              ],
+              "tools": [],
+              "tags": [
+                "Data Analysis",
+                "Business Analysis",
+                "Compliance/Banking domain"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 28
+            },
+            {
+              "id": "EXP01.B08",
+              "text": "Analyzed cancellation and no-show patterns by location type, quantifying that highway properties ran ~3x the late-cancellation rate of city properties, and designed differentiated overbooking and inventory-hold policies that protected revenue without raising walk rates.",
+              "metrics": [
+                "~3x"
+              ],
+              "tools": [],
+              "tags": [
+                "Data Science / ML / Forecasting",
+                "Data Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 64
+            },
+            {
+              "id": "EXP01.B09",
+              "text": "Analyzed inventory consumption, supply spend, and property damage/loss records to surface over-ordered consumables and recurring room damage driving avoidable repair and replacement cost — recommending reorder thresholds and damage-flagging rules that tightened supply spend at the highest-loss properties by an estimated 10–15%.",
+              "metrics": [
+                "10–15%"
+              ],
+              "tools": [],
+              "tags": [
+                "Data Analysis",
+                "Business Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 39
+            },
+            {
+              "id": "EXP01.B10",
+              "text": "Measured property and asset utilization (room-type mix, function-space usage, off-season capacity) across the three-archetype network, identifying idle capacity in low-demand periods and recommending extended-stay, maintenance-scheduling, and targeted-offer plans to put underused inventory back to work.",
+              "metrics": [],
+              "tools": [],
+              "tags": [
+                "Data Analysis",
+                "Business Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 47
+            },
+            {
+              "id": "EXP01.B11",
+              "text": "Automated the weekly cross-property operations report in Python and SQL, replacing a ~6-hour manual merge of 17 spreadsheets with a validated pipeline that reconciled totals and output formatted Excel and Power BI summaries in under 40 minutes — a ~90% cut in reporting effort.",
+              "metrics": [
+                "~6-hour",
+                "40 minutes",
+                "~90%"
+              ],
+              "tools": [
+                "Power BI",
+                "Advanced Excel",
+                "Python",
+                "SQL",
+                "Reconciliation"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Data Engineering"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 20
+            },
+            {
+              "id": "EXP01.B12",
+              "text": "Delivered the prescriptive layer as a decision playbook plus VBA-driven what-if scenario tools that let managers model demand drops, staffing cuts, and event surges against quantified staffing, cost, and revenue outcomes — adopted as the regional planning standard and projected to lift overall operational efficiency by a double-digit margin.",
+              "metrics": [],
+              "tools": [],
+              "tags": [
+                "Data Science / ML / Forecasting",
+                "Data Analysis",
+                "Business Analysis"
+              ],
+              "category": "Data Science / ML / Forecasting",
+              "focus_score": 71
+            }
+          ]
+        },
+        {
+          "id": "EXP02",
+          "company": "Gemsource Inc",
+          "title": "Big Data Analyst",
+          "location": "Aubrey, TX",
+          "dates": "Oct 2025 – Jan 2026",
+          "company_dates": "Oct 2025 – Jan 2026",
+          "environment": [
+            "Python",
+            "PySpark",
+            "SQL (MySQL, PostgreSQL)",
+            "AWS (S3, Glue, Lambda, CloudWatch, SNS)",
+            "Azure (Data Factory, Blob Storage)",
+            "Apache Airflow",
+            "Parquet",
+            "Git",
+            "JIRA",
+            "Confluence"
+          ],
+          "primary_categories": [
+            "Data Analysis",
+            "Data Engineering"
+          ],
+          "role_focus_score": 32,
+          "bullets": [
+            {
+              "id": "EXP02.B01",
+              "text": "Built PySpark pipelines on AWS Glue to ingest and unify order, inventory, and shipment data from wholesale hubs, local vendors, and carrier feeds — standardizing several hundred thousand records per daily run into curated, date-partitioned Parquet for analysis and reporting.",
+              "metrics": [],
+              "tools": [
+                "PySpark",
+                "AWS",
+                "Glue",
+                "Apache Spark",
+                "Parquet"
+              ],
+              "tags": [
+                "Data Analysis",
+                "BI & Visualization",
+                "Data Engineering"
+              ],
+              "category": "Data Engineering",
+              "focus_score": 19
+            },
+            {
+              "id": "EXP02.B02",
+              "text": "Engineered schema enforcement, deduplication, and multi-source joins across POS, warehouse, and vendor-order systems to reconcile vendor, SKU, and location keys — producing a single clean supply-and-demand dataset that replaced manual, error-prone consolidation.",
+              "metrics": [],
+              "tools": [
+                "Data Warehouse Design",
+                "Star/Snowflake Schema",
+                "Reconciliation"
+              ],
+              "tags": [
+                "Data Engineering"
+              ],
+              "category": "Data Engineering",
+              "focus_score": 2
+            },
+            {
+              "id": "EXP02.B03",
+              "text": "Designed and orchestrated ETL workflows in Apache Airflow with file sensors, dependency management, retries, and failure alerting, and developed parameterized Azure Data Factory pipelines for separate client accounts to onboard new vendor and regional-hub feeds without rebuilding logic.",
+              "metrics": [],
+              "tools": [
+                "Azure",
+                "Data Factory",
+                "Apache Airflow"
+              ],
+              "tags": [
+                "Data Engineering"
+              ],
+              "category": "Data Engineering",
+              "focus_score": 6
+            },
+            {
+              "id": "EXP02.B04",
+              "text": "Analyzed curated supply-chain data in SQL (MySQL, PostgreSQL) using CTEs and window functions to surface demand concentration by region, fill rate to remote vendors, stockout frequency, and delivery lead times — delivering analysis-ready tables to BI teams.",
+              "metrics": [],
+              "tools": [
+                "SQL",
+                "MySQL",
+                "PostgreSQL"
+              ],
+              "tags": [
+                "Data Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 57
+            },
+            {
+              "id": "EXP02.B05",
+              "text": "Analyzed long-haul fleet telematics, maintenance logs, and route data to identify breakdown-risk patterns across vehicles, routes, and usage cycles — surfacing the failure signals that let the team shift to preventive-maintenance scheduling and reduce en-route vehicle breakdowns by up to 14%, keeping deliveries to remote vendors on time.",
+              "metrics": [
+                "14%"
+              ],
+              "tools": [],
+              "tags": [
+                "Data Science / ML / Forecasting",
+                "Data Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 91
+            },
+            {
+              "id": "EXP02.B06",
+              "text": "Automated the extract–transform–validate–publish cycle across accounts, cutting daily manual data consolidation from roughly two hours to under 20 minutes and enabling the platform to extend coverage to more vendors and harder-to-reach areas without added manual effort.",
+              "metrics": [
+                "20 minutes"
+              ],
+              "tools": [],
+              "tags": [],
+              "category": "Data Analysis",
+              "focus_score": 15
+            }
+          ]
+        },
+        {
+          "id": "EXP03",
+          "company": "MagTech Consulting",
+          "title": "Data Engineer",
+          "location": "Bound Brook, NJ",
+          "dates": "May 2025 – Oct 2025",
+          "company_dates": "May 2025 – Oct 2025",
+          "environment": [
+            "Python",
+            "AWS (Lambda, S3, Transcribe, Polly, SQS, EventBridge, Step Functions, CloudWatch)",
+            "Whisper",
+            "FFmpeg",
+            "ElevenLabs",
+            "OpenAI GPT-4o",
+            "Amazon Bedrock",
+            "spaCy",
+            "Hugging Face Transformers",
+            "REST APIs",
+            "Webhooks",
+            "JSON",
+            "Git"
+          ],
+          "primary_categories": [
+            "AI / NLP",
+            "Data Engineering"
+          ],
+          "role_focus_score": 8,
+          "bullets": [
+            {
+              "id": "EXP03.B01",
+              "text": "Built serverless multimedia processing pipelines on AWS Lambda that ingested user-uploaded audio, video, and text from multiple content-creation startups and converted them into structured, publish-ready outputs — delivering the AI backend for products whose founders owned the vision but not the engineering.",
+              "metrics": [],
+              "tools": [
+                "AWS",
+                "Lambda"
+              ],
+              "tags": [
+                "Data Engineering"
+              ],
+              "category": "Data Engineering",
+              "focus_score": 4
+            },
+            {
+              "id": "EXP03.B02",
+              "text": "Engineered speech-to-text transcription pipelines using Whisper and AWS Transcribe that converted uploaded audio into accurate, timestamped transcripts, with chunking and retry logic to process long-form files reliably without dropping segments.",
+              "metrics": [],
+              "tools": [
+                "AWS",
+                "Whisper",
+                "AWS Transcribe"
+              ],
+              "tags": [
+                "Data Engineering",
+                "AI / NLP"
+              ],
+              "category": "AI / NLP",
+              "focus_score": 6
+            },
+            {
+              "id": "EXP03.B03",
+              "text": "Developed text-to-audio voiceover pipelines integrating ElevenLabs and AWS Polly to turn written content into natural narration — letting client platforms offer automated audio without building the capability in-house.",
+              "metrics": [],
+              "tools": [
+                "AWS",
+                "ElevenLabs",
+                "AWS Polly"
+              ],
+              "tags": [
+                "Data Engineering",
+                "AI / NLP"
+              ],
+              "category": "AI / NLP",
+              "focus_score": 4
+            },
+            {
+              "id": "EXP03.B04",
+              "text": "Built video-to-text pipelines using FFmpeg for audio extraction and Whisper for transcription to generate captions and searchable transcripts, turning unstructured video uploads into indexed, repurposable content.",
+              "metrics": [],
+              "tools": [
+                "Whisper",
+                "FFmpeg"
+              ],
+              "tags": [
+                "Data Engineering",
+                "AI / NLP"
+              ],
+              "category": "AI / NLP",
+              "focus_score": 5
+            },
+            {
+              "id": "EXP03.B05",
+              "text": "Integrated LLMs (OpenAI GPT-4o via API, Amazon Bedrock) into the pipeline for summarization, tagging, and content enrichment, converting raw transcripts and media metadata into structured, ready-to-publish outputs for client applications.",
+              "metrics": [],
+              "tools": [
+                "LLM integration",
+                "OpenAI GPT-4o",
+                "Amazon Bedrock"
+              ],
+              "tags": [
+                "Data Engineering",
+                "AI / NLP"
+              ],
+              "category": "AI / NLP",
+              "focus_score": 6
+            },
+            {
+              "id": "EXP03.B06",
+              "text": "Applied NLP techniques — entity extraction, keyword tagging, language detection, and content classification (spaCy, Hugging Face Transformers) — on asynchronous, event-driven orchestration (SQS, EventBridge, Step Functions) that let client apps process media at scale without blocking users.",
+              "metrics": [],
+              "tools": [
+                "EventBridge",
+                "Step Functions",
+                "NLP",
+                "spaCy",
+                "Hugging Face Transformers",
+                "SQS"
+              ],
+              "tags": [
+                "Data Science / ML / Forecasting",
+                "Data Engineering",
+                "AI / NLP"
+              ],
+              "category": "AI / NLP",
+              "focus_score": 20
+            }
+          ]
+        },
+        {
+          "id": "EXP04",
+          "company": "BringWise LLC",
+          "title": "Data Engineer",
+          "location": "Frisco, TX",
+          "dates": "Mar 2025 – May 2025",
+          "company_dates": "Mar 2025 – May 2025",
+          "environment": [
+            "Python",
+            "SQL (MySQL, PostgreSQL)",
+            "Power BI",
+            "VBA",
+            "Payment Gateway APIs/Webhooks",
+            "Bank Settlement Files",
+            "REST APIs",
+            "JSON",
+            "Git",
+            "JIRA"
+          ],
+          "primary_categories": [
+            "BI & Visualization",
+            "Compliance/Banking domain",
+            "Data Analysis",
+            "Data Engineering"
+          ],
+          "role_focus_score": 8,
+          "bullets": [
+            {
+              "id": "EXP04.B01",
+              "text": "Built transaction data pipelines ingesting payment events from gateway webhooks/APIs and bank settlement files — processing tens of thousands of daily transactions — normalizing disparate formats into a unified schema for reconciliation and reporting.",
+              "metrics": [],
+              "tools": [
+                "Star/Snowflake Schema",
+                "Reconciliation",
+                "Webhooks",
+                "Bank Settlement Files"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Data Engineering",
+                "Compliance/Banking domain"
+              ],
+              "category": "Data Engineering",
+              "focus_score": 5
+            },
+            {
+              "id": "EXP04.B02",
+              "text": "Engineered payment reconciliation matching internal orders to gateway charges and bank settlements (two- and three-way), using exact-reference rules first and fuzzy matching for partial references and batched settlements — lifting automated match rate to ~97%.",
+              "metrics": [
+                "~97%"
+              ],
+              "tools": [
+                "Reconciliation"
+              ],
+              "tags": [
+                "Compliance/Banking domain"
+              ],
+              "category": "Compliance/Banking domain",
+              "focus_score": 5
+            },
+            {
+              "id": "EXP04.B03",
+              "text": "Built exception-handling routing that classified unmatched transactions by type — missing references, rounding deltas, timing differences — and queued them for resolution, cutting manual investigation time by ~40%.",
+              "metrics": [
+                "~40%"
+              ],
+              "tools": [],
+              "tags": [],
+              "category": "Data Analysis",
+              "focus_score": 15
+            },
+            {
+              "id": "EXP04.B04",
+              "text": "Developed configurable Power BI reporting templates spanning 15+ payment KPIs — transaction volume, authorization/success rate, chargeback rate, settlement timing, and fee breakdown — that let each client select the metrics and views relevant to their business.",
+              "metrics": [
+                "15+ payment KPIs"
+              ],
+              "tools": [
+                "Power BI",
+                "KPI Dashboards"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Compliance/Banking domain"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 10
+            },
+            {
+              "id": "EXP04.B05",
+              "text": "Automated recurring data feeds and report generation in Python and VBA, cutting report preparation from hours to minutes and standardizing daily and monthly payment reporting across client business units.",
+              "metrics": [],
+              "tools": [
+                "Python",
+                "VBA"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Data Engineering"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 7
+            },
+            {
+              "id": "EXP04.B06",
+              "text": "Partnered with client teams to configure each reporting deployment to their payment stack and metric definitions, delivering tailored financial dashboards rather than a one-size-fits-all template.",
+              "metrics": [],
+              "tools": [],
+              "tags": [
+                "BI & Visualization",
+                "Business Analysis"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 5
+            }
+          ]
+        },
+        {
+          "id": "EXP05",
+          "company": "BA Continuum India Pvt. Ltd. (Bank of America)",
+          "title": "Senior Data Analyst / BI Analyst",
+          "location": "Hyderabad, India",
+          "dates": "Jun 2021 – Dec 2023",
+          "company_dates": "Jun 2017 – Dec 2023",
+          "environment": [],
+          "primary_categories": [
+            "BI & Visualization",
+            "Business Analysis",
+            "Data Analysis"
+          ],
+          "role_focus_score": 22,
+          "bullets": [
+            {
+              "id": "EXP05.B01",
+              "text": "Delivered 15+ Power BI and Tableau dashboards for retail banking operations — modeling the underlying datasets in SQL and DAX — to give leadership real-time visibility into deposit growth, servicing KPIs, and regulatory metrics that previously took manual weekly compilation.",
+              "metrics": [
+                "15+"
+              ],
+              "tools": [
+                "Power BI",
+                "Tableau",
+                "DAX",
+                "KPI Dashboards",
+                "SQL",
+                "Data Modeling"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Compliance/Banking domain"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 16
+            },
+            {
+              "id": "EXP05.B02",
+              "text": "Reduced SQL query runtime by 38% across MySQL, PostgreSQL, SQL Server, and Snowflake through query rewrites, indexing, and execution-plan tuning — cutting the reporting lag that was delaying daily operational decisions for 80+ stakeholders.",
+              "metrics": [
+                "38%",
+                "80+ stakeholders"
+              ],
+              "tools": [
+                "SQL",
+                "MySQL",
+                "PostgreSQL",
+                "SQL Server",
+                "Snowflake"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Business Analysis",
+                "Data Engineering"
+              ],
+              "category": "Business Analysis",
+              "focus_score": 14
+            },
+            {
+              "id": "EXP05.B03",
+              "text": "Automated 35+ recurring banking reports in Python (pandas), R, and VBA, collapsing an 8-hour manual compilation into under 90 minutes across financial and operational reporting cycles.",
+              "metrics": [
+                "35+",
+                "8-hour",
+                "90 minutes"
+              ],
+              "tools": [
+                "Python",
+                "Pandas",
+                "R",
+                "VBA"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Compliance/Banking domain"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 16
+            },
+            {
+              "id": "EXP05.B04",
+              "text": "Built self-service analytics models in Power BI with parameterized measures so business teams could answer their own operational questions, cutting ad-hoc requests to the analytics team by ~45%.",
+              "metrics": [
+                "~45%"
+              ],
+              "tools": [
+                "Power BI",
+                "Self-Service Analytics"
+              ],
+              "tags": [
+                "BI & Visualization"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 8
+            },
+            {
+              "id": "EXP05.B05",
+              "text": "Traced and resolved data inconsistencies across core retail banking domains using SQL reconciliation and root-cause analysis, improving reporting accuracy by ~29% and preventing decisions made on bad data.",
+              "metrics": [
+                "~29%"
+              ],
+              "tools": [
+                "SQL",
+                "Reconciliation"
+              ],
+              "tags": [
+                "Data Analysis",
+                "BI & Visualization",
+                "Business Analysis",
+                "Compliance/Banking domain"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 53
+            },
+            {
+              "id": "EXP05.B06",
+              "text": "Mentored 6 junior analysts on SQL optimization, Power BI/Tableau, and documentation standards, raising team productivity ~22% within 6 months.",
+              "metrics": [
+                "6 junior analysts",
+                "~22%",
+                "6 months"
+              ],
+              "tools": [
+                "Power BI",
+                "Tableau",
+                "SQL"
+              ],
+              "tags": [
+                "Data Analysis",
+                "BI & Visualization",
+                "Business Analysis"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 28
+            }
+          ]
+        },
+        {
+          "id": "EXP06",
+          "company": "BA Continuum India Pvt. Ltd. (Bank of America)",
+          "title": "Data Analyst / Technology Analyst",
+          "location": "Hyderabad, India",
+          "dates": "Oct 2018 – May 2021",
+          "company_dates": "Jun 2017 – Dec 2023",
+          "environment": [],
+          "primary_categories": [
+            "BI & Visualization",
+            "Business Analysis",
+            "Data Analysis",
+            "Data Engineering"
+          ],
+          "role_focus_score": 22,
+          "bullets": [
+            {
+              "id": "EXP06.B01",
+              "text": "Analyzed 500M+ transactional records using SQL and Advanced Excel across retail banking and trade finance, surfacing volume, exception, and risk trends that drove operational and compliance decisions.",
+              "metrics": [
+                "500M+"
+              ],
+              "tools": [
+                "Advanced Excel",
+                "SQL"
+              ],
+              "tags": [
+                "Data Analysis",
+                "BI & Visualization",
+                "Business Analysis",
+                "Compliance/Banking domain"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 54
+            },
+            {
+              "id": "EXP06.B02",
+              "text": "Built and maintained 12 Power BI and Tableau dashboards on SQL-modeled datasets, delivering real-time KPI visibility to 80+ stakeholders across 3 business units.",
+              "metrics": [
+                "80+ stakeholders",
+                "3 business units"
+              ],
+              "tools": [
+                "Power BI",
+                "Tableau",
+                "KPI Dashboards",
+                "SQL",
+                "Data Modeling"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Business Analysis"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 18
+            },
+            {
+              "id": "EXP06.B03",
+              "text": "Authored BRD and FRD documentation for 9 reporting and data initiatives, translating banking business requirements into technical specs and SQL data-mapping that guided development and cut rework.",
+              "metrics": [],
+              "tools": [
+                "SQL",
+                "BRD/FRD"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Business Analysis",
+                "Compliance/Banking domain"
+              ],
+              "category": "Business Analysis",
+              "focus_score": 7
+            },
+            {
+              "id": "EXP06.B04",
+              "text": "Ran Gap Analysis and Process Mapping in Visio against existing reporting workflows, identifying inefficiencies and defining the SQL and automation changes to close them.",
+              "metrics": [],
+              "tools": [
+                "SQL",
+                "Gap Analysis",
+                "Process Mapping",
+                "Visio"
+              ],
+              "tags": [
+                "Data Analysis",
+                "BI & Visualization",
+                "Business Analysis"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 39
+            },
+            {
+              "id": "EXP06.B05",
+              "text": "Supported UAT for 7 system releases — writing test cases, tracking 140+ defects in JIRA and Confluence, and automating test-result reporting in Python and VBA.",
+              "metrics": [
+                "7 system releases",
+                "140+ defects"
+              ],
+              "tools": [
+                "Python",
+                "VBA",
+                "JIRA",
+                "Confluence",
+                "UAT"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Business Analysis"
+              ],
+              "category": "Business Analysis",
+              "focus_score": 14
+            },
+            {
+              "id": "EXP06.B06",
+              "text": "Wrote SQL queries and stored procedures to extract and transform large banking datasets, standardizing data pulls that had been manual and inconsistent.",
+              "metrics": [],
+              "tools": [
+                "SQL"
+              ],
+              "tags": [
+                "Data Engineering",
+                "Compliance/Banking domain"
+              ],
+              "category": "Data Engineering",
+              "focus_score": 1
+            }
+          ]
+        },
+        {
+          "id": "EXP07",
+          "company": "BA Continuum India Pvt. Ltd. (Bank of America)",
+          "title": "Financial Operations & Trade Finance Analyst",
+          "location": "Hyderabad, India",
+          "dates": "Jun 2017 – Oct 2018",
+          "company_dates": "Jun 2017 – Dec 2023",
+          "environment": [],
+          "primary_categories": [
+            "BI & Visualization",
+            "Compliance/Banking domain",
+            "Data Analysis"
+          ],
+          "role_focus_score": 15,
+          "bullets": [
+            {
+              "id": "EXP07.B01",
+              "text": "Conducted AML monitoring and KYC reviews on 200+ accounts monthly in the AWARE system, analyzing transaction patterns to flag suspicious activity with zero OFAC/FinCEN exceptions across the role.",
+              "metrics": [
+                "200+ accounts"
+              ],
+              "tools": [],
+              "tags": [
+                "Data Analysis",
+                "Compliance/Banking domain"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 40
+            },
+            {
+              "id": "EXP07.B02",
+              "text": "Processed 150+ trade finance instruments monthly (LCs, Trade Loans, TADV, PEXP), validating documentation and data entry against UCP 600 and internal compliance rules.",
+              "metrics": [
+                "150+"
+              ],
+              "tools": [],
+              "tags": [
+                "Compliance/Banking domain"
+              ],
+              "category": "Compliance/Banking domain",
+              "focus_score": 5
+            },
+            {
+              "id": "EXP07.B03",
+              "text": "Executed and reconciled cross-border SWIFT payments (MT700/707/710/720/799) averaging $4.2M monthly, verifying message data for settlement accuracy with no errors.",
+              "metrics": [
+                "$4.2M monthly"
+              ],
+              "tools": [
+                "Reconciliation"
+              ],
+              "tags": [
+                "Compliance/Banking domain"
+              ],
+              "category": "Compliance/Banking domain",
+              "focus_score": 5
+            },
+            {
+              "id": "EXP07.B04",
+              "text": "Built automated MIS reporting templates in Excel (advanced formulas, pivot tables, VBA) that cut manual reconciliation by 40% and standardized daily operational reporting for the trade desk.",
+              "metrics": [
+                "40%"
+              ],
+              "tools": [
+                "Advanced Excel",
+                "Pivot Tables",
+                "VBA",
+                "Reconciliation"
+              ],
+              "tags": [
+                "BI & Visualization"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 11
+            },
+            {
+              "id": "EXP07.B05",
+              "text": "Screened inbound and outbound payments against sanctions and watchlists, analyzing match data and escalating flagged items per compliance protocol.",
+              "metrics": [],
+              "tools": [],
+              "tags": [
+                "Data Analysis",
+                "Compliance/Banking domain"
+              ],
+              "category": "Data Analysis",
+              "focus_score": 24
+            },
+            {
+              "id": "EXP07.B06",
+              "text": "Reconciled trade finance transactions against bank records and SWIFT confirmations using Excel-based matching, resolving discrepancies before settlement.",
+              "metrics": [],
+              "tools": [
+                "Advanced Excel",
+                "Reconciliation"
+              ],
+              "tags": [
+                "BI & Visualization",
+                "Compliance/Banking domain"
+              ],
+              "category": "BI & Visualization",
+              "focus_score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "items": [
+        {
+          "id": "EDU01",
+          "degree": "Ph.D. in Information Technology",
+          "school": "University of the Cumberlands, KY",
+          "dates": "Aug 2026 – Present",
+          "status": "in progress"
+        },
+        {
+          "id": "EDU02",
+          "degree": "M.S. in Business Analytics",
+          "school": "Kent State University, OH",
+          "dates": "Jan 2024 – Dec 2024",
+          "status": "completed"
+        },
+        {
+          "id": "EDU03",
+          "degree": "MBA (Finance)",
+          "school": "Osmania University, Hyderabad",
+          "dates": "2014 – 2016",
+          "status": "completed"
+        },
+        {
+          "id": "EDU04",
+          "degree": "B.Com (Computers)",
+          "school": "Osmania University, Hyderabad",
+          "dates": "2011 – 2014",
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "featured_bullet_ids": [
+    "EXP01.B02",
+    "EXP02.B05",
+    "EXP01.B12",
+    "EXP01.B06",
+    "EXP01.B08",
+    "EXP02.B04",
+    "EXP06.B01",
+    "EXP01.B04"
+  ]
+}

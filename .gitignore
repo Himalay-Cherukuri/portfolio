@@ -1,0 +1,5 @@
+# private: never publish
+source/
+build/
+*.pdf
+__pycache__/

@@ -1,0 +1,74 @@
+{
+  "name": "Himalay Cherukuri",
+  "headline": "Data Analyst | Data Science & Forecasting: Python, SQL and Power BI analytics that drive operational decisions",
+  "tagline": "8+ years turning data into forecasts, dashboards and decisions, across hospitality operations, supply chain, payments and banking.",
+  "about": "I'm a Data Analyst with 8+ years of experience in data analytics, business intelligence, financial reporting, ETL pipeline development and business analysis. Most recently I consolidated 20 years of operating history across 17 properties and built Python forecasts that held within ~8–10% of actuals. Before that I spent 6+ years at Bank of America across retail banking, trade finance and AML/KYC compliance, delivering dashboards and automated reporting. I've also built ETL pipelines on AWS and Azure with Python, SQL, Spark and Airflow. I hold an M.S. in Business Analytics and am pursuing a Ph.D. in Information Technology.",
+  "focus_order": [
+    "Data Science / ML / Forecasting",
+    "Data Analysis",
+    "BI & Visualization",
+    "Business Analysis",
+    "Data Engineering",
+    "AI / NLP",
+    "Compliance/Banking domain"
+  ],
+  "roles": [
+    {
+      "id": "EXP01",
+      "company": "Iresh Technologies LLC",
+      "title": "Data Analyst — Operations Research & Operations Management",
+      "dates": "Jan 2026 – May 2026",
+      "one_liner": "Unified 20 years of records for 17 properties and used Python forecasting and operations analysis to guide staffing, revenue and cost decisions.",
+      "role_focus_score": 50
+    },
+    {
+      "id": "EXP02",
+      "company": "Gemsource Inc",
+      "title": "Big Data Analyst",
+      "dates": "Oct 2025 – Jan 2026",
+      "one_liner": "Built PySpark/Airflow pipelines for supply-chain data and analyzed fleet telematics to cut en-route breakdowns by up to 14%.",
+      "role_focus_score": 32
+    },
+    {
+      "id": "EXP03",
+      "company": "MagTech Consulting",
+      "title": "Data Engineer",
+      "dates": "May 2025 – Oct 2025",
+      "one_liner": "Built serverless AWS pipelines for transcription, voiceover and LLM/NLP enrichment of media for content-creation startups.",
+      "role_focus_score": 8
+    },
+    {
+      "id": "EXP04",
+      "company": "BringWise LLC",
+      "title": "Data Engineer",
+      "dates": "Mar 2025 – May 2025",
+      "one_liner": "Built payment data pipelines and reconciliation that raised automated match rate to ~97%, plus Power BI KPI templates.",
+      "role_focus_score": 8
+    },
+    {
+      "id": "EXP05",
+      "company": "BA Continuum India Pvt. Ltd. (Bank of America)",
+      "title": "Senior Data Analyst / BI Analyst",
+      "dates": "Jun 2021 – Dec 2023",
+      "one_liner": "Delivered 15+ Power BI/Tableau dashboards, cut SQL runtime 38% and automated 35+ banking reports for retail banking leadership.",
+      "role_focus_score": 22
+    },
+    {
+      "id": "EXP06",
+      "company": "BA Continuum India Pvt. Ltd. (Bank of America)",
+      "title": "Data Analyst / Technology Analyst",
+      "dates": "Oct 2018 – May 2021",
+      "one_liner": "Analyzed 500M+ banking transactions, built 12 dashboards for 80+ stakeholders and wrote BRDs/FRDs for 9 data initiatives.",
+      "role_focus_score": 22
+    },
+    {
+      "id": "EXP07",
+      "company": "BA Continuum India Pvt. Ltd. (Bank of America)",
+      "title": "Financial Operations & Trade Finance Analyst",
+      "dates": "Jun 2017 – Oct 2018",
+      "one_liner": "Ran AML/KYC reviews, trade finance processing and SWIFT reconciliation, with Excel/VBA MIS automation that cut manual reconciliation by 40%.",
+      "role_focus_score": 15
+    }
+  ],
+  "note": "Summaries are short paraphrases of resume bullets; every number appears in the resume."
+}

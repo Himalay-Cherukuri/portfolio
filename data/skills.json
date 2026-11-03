@@ -1,0 +1,890 @@
+{
+  "groups": [
+    {
+      "group": "Analytics & BI",
+      "skills": [
+        {
+          "name": "Power BI",
+          "parent": null,
+          "count": 6,
+          "roles": [
+            "EXP01",
+            "EXP04",
+            "EXP05",
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP01.B11",
+            "EXP04.B04",
+            "EXP05.B01",
+            "EXP05.B04",
+            "EXP05.B06",
+            "EXP06.B02"
+          ]
+        },
+        {
+          "name": "Tableau",
+          "parent": null,
+          "count": 3,
+          "roles": [
+            "EXP05",
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP05.B01",
+            "EXP05.B06",
+            "EXP06.B02"
+          ]
+        },
+        {
+          "name": "DAX",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP05"
+          ],
+          "bullets": [
+            "EXP05.B01"
+          ]
+        },
+        {
+          "name": "Advanced Excel",
+          "parent": null,
+          "count": 4,
+          "roles": [
+            "EXP01",
+            "EXP06",
+            "EXP07"
+          ],
+          "bullets": [
+            "EXP01.B11",
+            "EXP06.B01",
+            "EXP07.B04",
+            "EXP07.B06"
+          ]
+        },
+        {
+          "name": "Macros",
+          "parent": "Advanced Excel",
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        },
+        {
+          "name": "Pivot Tables",
+          "parent": "Advanced Excel",
+          "count": 1,
+          "roles": [
+            "EXP01",
+            "EXP07"
+          ],
+          "bullets": [
+            "EXP07.B04"
+          ]
+        },
+        {
+          "name": "KPI Dashboards",
+          "parent": null,
+          "count": 3,
+          "roles": [
+            "EXP04",
+            "EXP05",
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP04.B04",
+            "EXP05.B01",
+            "EXP06.B02"
+          ]
+        },
+        {
+          "name": "Self-Service Analytics",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP05"
+          ],
+          "bullets": [
+            "EXP05.B04"
+          ]
+        },
+        {
+          "name": "Alteryx",
+          "parent": null,
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        }
+      ]
+    },
+    {
+      "group": "Languages",
+      "skills": [
+        {
+          "name": "Python",
+          "parent": null,
+          "count": 6,
+          "roles": [
+            "EXP01",
+            "EXP02",
+            "EXP03",
+            "EXP04",
+            "EXP05",
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP01.B02",
+            "EXP01.B06",
+            "EXP01.B11",
+            "EXP04.B05",
+            "EXP05.B03",
+            "EXP06.B05"
+          ]
+        },
+        {
+          "name": "Pandas",
+          "parent": "Python",
+          "count": 2,
+          "roles": [
+            "EXP01",
+            "EXP05"
+          ],
+          "bullets": [
+            "EXP01.B02",
+            "EXP05.B03"
+          ]
+        },
+        {
+          "name": "NumPy",
+          "parent": "Python",
+          "count": 0,
+          "roles": [
+            "EXP01"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "statsmodels",
+          "parent": "Python",
+          "count": 1,
+          "roles": [
+            "EXP01"
+          ],
+          "bullets": [
+            "EXP01.B02"
+          ]
+        },
+        {
+          "name": "Scikit-learn",
+          "parent": "Python",
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        },
+        {
+          "name": "SQL",
+          "parent": null,
+          "count": 11,
+          "roles": [
+            "EXP01",
+            "EXP02",
+            "EXP04",
+            "EXP05",
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP01.B11",
+            "EXP02.B04",
+            "EXP05.B01",
+            "EXP05.B02",
+            "EXP05.B05",
+            "EXP05.B06",
+            "EXP06.B01",
+            "EXP06.B02",
+            "EXP06.B03",
+            "EXP06.B04",
+            "EXP06.B06"
+          ]
+        },
+        {
+          "name": "PySpark",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": [
+            "EXP02.B01"
+          ]
+        },
+        {
+          "name": "R",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP05"
+          ],
+          "bullets": [
+            "EXP05.B03"
+          ]
+        },
+        {
+          "name": "VBA",
+          "parent": null,
+          "count": 4,
+          "roles": [
+            "EXP01",
+            "EXP04",
+            "EXP05",
+            "EXP06",
+            "EXP07"
+          ],
+          "bullets": [
+            "EXP04.B05",
+            "EXP05.B03",
+            "EXP06.B05",
+            "EXP07.B04"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Databases",
+      "skills": [
+        {
+          "name": "MySQL",
+          "parent": null,
+          "count": 3,
+          "roles": [
+            "EXP01",
+            "EXP02",
+            "EXP04",
+            "EXP05"
+          ],
+          "bullets": [
+            "EXP01.B01",
+            "EXP02.B04",
+            "EXP05.B02"
+          ]
+        },
+        {
+          "name": "PostgreSQL",
+          "parent": null,
+          "count": 2,
+          "roles": [
+            "EXP02",
+            "EXP04",
+            "EXP05"
+          ],
+          "bullets": [
+            "EXP02.B04",
+            "EXP05.B02"
+          ]
+        },
+        {
+          "name": "SQL Server",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP05"
+          ],
+          "bullets": [
+            "EXP05.B02"
+          ]
+        },
+        {
+          "name": "Snowflake",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP05"
+          ],
+          "bullets": [
+            "EXP05.B02"
+          ]
+        },
+        {
+          "name": "Oracle",
+          "parent": null,
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        },
+        {
+          "name": "Amazon Redshift",
+          "parent": null,
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        }
+      ]
+    },
+    {
+      "group": "Cloud & ETL",
+      "skills": [
+        {
+          "name": "AWS",
+          "parent": null,
+          "count": 4,
+          "roles": [
+            "EXP02",
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP02.B01",
+            "EXP03.B01",
+            "EXP03.B02",
+            "EXP03.B03"
+          ]
+        },
+        {
+          "name": "S3",
+          "parent": "AWS",
+          "count": 0,
+          "roles": [
+            "EXP02",
+            "EXP03"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "Glue",
+          "parent": "AWS",
+          "count": 1,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": [
+            "EXP02.B01"
+          ]
+        },
+        {
+          "name": "Lambda",
+          "parent": "AWS",
+          "count": 1,
+          "roles": [
+            "EXP02",
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B01"
+          ]
+        },
+        {
+          "name": "EMR",
+          "parent": "AWS",
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        },
+        {
+          "name": "EventBridge",
+          "parent": "AWS",
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B06"
+          ]
+        },
+        {
+          "name": "Step Functions",
+          "parent": "AWS",
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B06"
+          ]
+        },
+        {
+          "name": "CloudWatch",
+          "parent": "AWS",
+          "count": 0,
+          "roles": [
+            "EXP02",
+            "EXP03"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "SNS",
+          "parent": "AWS",
+          "count": 0,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "Azure",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": [
+            "EXP02.B03"
+          ]
+        },
+        {
+          "name": "Data Factory",
+          "parent": "Azure",
+          "count": 1,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": [
+            "EXP02.B03"
+          ]
+        },
+        {
+          "name": "Blob Storage",
+          "parent": "Azure",
+          "count": 0,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "Synapse",
+          "parent": "Azure",
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        },
+        {
+          "name": "Apache Spark",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": [
+            "EXP02.B01"
+          ]
+        },
+        {
+          "name": "Apache Airflow",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": [
+            "EXP02.B03"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "AI / Multimedia",
+      "skills": [
+        {
+          "name": "NLP",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B06"
+          ]
+        },
+        {
+          "name": "spaCy",
+          "parent": "NLP",
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B06"
+          ]
+        },
+        {
+          "name": "Hugging Face Transformers",
+          "parent": "NLP",
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B06"
+          ]
+        },
+        {
+          "name": "LLM integration",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B05"
+          ]
+        },
+        {
+          "name": "OpenAI GPT-4o",
+          "parent": "LLM integration",
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B05"
+          ]
+        },
+        {
+          "name": "Amazon Bedrock",
+          "parent": "LLM integration",
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B05"
+          ]
+        },
+        {
+          "name": "Whisper",
+          "parent": null,
+          "count": 2,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B02",
+            "EXP03.B04"
+          ]
+        },
+        {
+          "name": "FFmpeg",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B04"
+          ]
+        },
+        {
+          "name": "ElevenLabs",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B03"
+          ]
+        },
+        {
+          "name": "AWS Transcribe",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B02"
+          ]
+        },
+        {
+          "name": "AWS Polly",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B03"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Architecture",
+      "skills": [
+        {
+          "name": "Data Warehouse Design",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": [
+            "EXP02.B02"
+          ]
+        },
+        {
+          "name": "Data Lake Architecture",
+          "parent": null,
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        },
+        {
+          "name": "Star/Snowflake Schema",
+          "parent": null,
+          "count": 3,
+          "roles": [
+            "EXP01",
+            "EXP02",
+            "EXP04"
+          ],
+          "bullets": [
+            "EXP01.B01",
+            "EXP02.B02",
+            "EXP04.B01"
+          ]
+        },
+        {
+          "name": "Data Modeling",
+          "parent": null,
+          "count": 2,
+          "roles": [
+            "EXP05",
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP05.B01",
+            "EXP06.B02"
+          ]
+        },
+        {
+          "name": "Data Governance",
+          "parent": null,
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        }
+      ]
+    },
+    {
+      "group": "Methods & Tools",
+      "skills": [
+        {
+          "name": "Agile/Scrum",
+          "parent": null,
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        },
+        {
+          "name": "JIRA",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP02",
+            "EXP04",
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP06.B05"
+          ]
+        },
+        {
+          "name": "Confluence",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP02",
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP06.B05"
+          ]
+        },
+        {
+          "name": "GitHub",
+          "parent": null,
+          "count": 0,
+          "roles": [],
+          "bullets": []
+        },
+        {
+          "name": "BRD/FRD",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP06.B03"
+          ]
+        },
+        {
+          "name": "Gap Analysis",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP06.B04"
+          ]
+        },
+        {
+          "name": "Process Mapping",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP06.B04"
+          ]
+        },
+        {
+          "name": "Visio",
+          "parent": "Process Mapping",
+          "count": 1,
+          "roles": [
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP06.B04"
+          ]
+        },
+        {
+          "name": "UAT",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP06"
+          ],
+          "bullets": [
+            "EXP06.B05"
+          ]
+        },
+        {
+          "name": "Reconciliation",
+          "parent": null,
+          "count": 8,
+          "roles": [
+            "EXP01",
+            "EXP02",
+            "EXP04",
+            "EXP05",
+            "EXP07"
+          ],
+          "bullets": [
+            "EXP01.B11",
+            "EXP02.B02",
+            "EXP04.B01",
+            "EXP04.B02",
+            "EXP05.B05",
+            "EXP07.B03",
+            "EXP07.B04",
+            "EXP07.B06"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Other Tools (from experience)",
+      "skills": [
+        {
+          "name": "Solver",
+          "parent": null,
+          "count": 0,
+          "roles": [
+            "EXP01"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "Jupyter",
+          "parent": null,
+          "count": 0,
+          "roles": [
+            "EXP01"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "Git",
+          "parent": null,
+          "count": 0,
+          "roles": [
+            "EXP01",
+            "EXP02",
+            "EXP03",
+            "EXP04"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "Parquet",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP02"
+          ],
+          "bullets": [
+            "EXP02.B01"
+          ]
+        },
+        {
+          "name": "SQS",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP03"
+          ],
+          "bullets": [
+            "EXP03.B06"
+          ]
+        },
+        {
+          "name": "REST APIs",
+          "parent": null,
+          "count": 0,
+          "roles": [
+            "EXP03",
+            "EXP04"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "Webhooks",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP03",
+            "EXP04"
+          ],
+          "bullets": [
+            "EXP04.B01"
+          ]
+        },
+        {
+          "name": "JSON",
+          "parent": null,
+          "count": 0,
+          "roles": [
+            "EXP03",
+            "EXP04"
+          ],
+          "bullets": []
+        },
+        {
+          "name": "Bank Settlement Files",
+          "parent": null,
+          "count": 1,
+          "roles": [
+            "EXP04"
+          ],
+          "bullets": [
+            "EXP04.B01"
+          ]
+        }
+      ]
+    }
+  ]
+}
